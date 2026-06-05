@@ -1,4 +1,4 @@
-# Hybrid ASL Recognition System using MediaPipe and Machine Learning
+# 🤟 Hybrid ASL Recognition System using MediaPipe and Machine Learning
 
 A real-time American Sign Language (ASL) recognition system that combines MediaPipe hand landmark detection with Machine Learning algorithms to accurately recognize hand gestures and translate them into meaningful alphabet predictions. The project follows a lightweight and efficient approach by extracting hand landmarks instead of processing raw images directly, resulting in faster training and inference.
 
@@ -9,6 +9,32 @@ A real-time American Sign Language (ASL) recognition system that combines MediaP
 Communication through sign language plays a crucial role for individuals with hearing and speech impairments. This project aims to bridge the communication gap by developing an intelligent ASL recognition system capable of recognizing hand gestures in real time.
 
 The system first collects gesture images and preprocesses them using MediaPipe. Hand landmarks are extracted and converted into NumPy (`.npy`) files, which serve as feature vectors for Machine Learning model training. The trained model is then integrated with a webcam-based interface to perform real-time gesture recognition.
+
+---
+
+## 📸 Project Outputs
+
+### Homepage
+
+![Homepage](Homepage.jpeg)
+
+The user-friendly homepage provides access to the ASL recognition system and serves as the entry point for gesture detection and prediction.
+
+---
+
+### Hand Landmark Detection
+
+![Landmark Detection](picture1.jpeg)
+
+MediaPipe detects 21 hand landmarks and extracts their spatial coordinates. These landmarks are used as feature vectors for training the machine learning model.
+
+---
+
+### Real-Time Alphabet Recognition
+
+![Alphabet Recognition](alphabet.jpeg)
+
+The trained machine learning model predicts ASL alphabets in real time using webcam input and extracted hand landmark features.
 
 ---
 
@@ -49,24 +75,6 @@ Real-Time Gesture Prediction
 ```
 
 ---
-
-## 📂 Project Structure
-
-```text
-Hybrid-ASL-Recognition/
-│
-├── build_dataset.py
-├── extract_landmarks.py
-├── train_model.py
-├── check.py
-├── main.py
-├── images/
-├── README.md
-└── .gitignore
-```
-
----
-
 ## 🔍 Dataset Preprocessing
 
 The project uses a landmark-based approach instead of directly training on images.
@@ -96,99 +104,15 @@ These numerical representations significantly reduce computational complexity wh
 
 ---
 
-## 🧠 Machine Learning Model
+## 🛠️ Technologies Used
 
-The generated landmark features are used to train a Machine Learning classifier capable of distinguishing between different ASL gestures.
-
-Training Pipeline:
-
-```text
-Landmark Features
-        │
-        ▼
-Data Preprocessing
-        │
-        ▼
-Train-Test Split
-        │
-        ▼
-Machine Learning Model
-        │
-        ▼
-Model Evaluation
-        │
-        ▼
-Trained Classifier
-```
-
-The trained classifier learns gesture-specific patterns from hand landmark coordinates and predicts the corresponding sign during real-time execution.
-
----
-
-## 🚀 Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/Hybrid-ASL-Recognition.git
-cd Hybrid-ASL-Recognition
-```
-
-Install dependencies:
-
-```bash
-pip install opencv-python mediapipe numpy scikit-learn
-```
-
----
-
-## ▶️ Usage
-
-### Build Dataset
-
-```bash
-python build_dataset.py
-```
-
-### Extract Landmarks
-
-```bash
-python extract_landmarks.py
-```
-
-### Train Model
-
-```bash
-python train_model.py
-```
-
-### Validate Model
-
-```bash
-python check.py
-```
-
-### Run Real-Time Recognition
-
-```bash
-python main.py
-```
-
----
-
-## 📸 Project Demonstration
-
-### Dataset Collection
-
-![Dataset Collection](images/dataset_collection.jpeg)
-
-### Hand Landmark Detection
-
-![Landmark Detection](images/landmark_detection.jpeg)
-
-### Real-Time Prediction
-
-![Prediction](images/prediction.jpeg)
+* Python
+* OpenCV
+* MediaPipe
+* NumPy
+* Scikit-Learn
+* Machine Learning
+* Computer Vision
 
 ---
 
@@ -200,18 +124,6 @@ python main.py
 * LSTM-based dynamic gesture recognition
 * Text-to-Speech conversion
 * Multi-language sign support
-* Streamlit/Web deployment
-
----
-
-## 🛠️ Technologies Used
-
-* Python
-* OpenCV
-* MediaPipe
-* NumPy
-* Scikit-Learn
-* Machine Learning
-* Computer Vision
+* Web deployment using Streamlit
 
 ---
